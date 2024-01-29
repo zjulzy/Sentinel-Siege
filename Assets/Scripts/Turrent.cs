@@ -2,7 +2,10 @@ using UnityEngine;
 
 public class Turrent : MonoBehaviour
 {
+    public GameObject bulletPrefab;
+    public GameObject fireEffectPrefab;
     public Transform rotateBase;
+    public Transform firePoint;
     public float attackRange = 10f;
 
     public float reloadTime = 1f;
@@ -17,6 +20,7 @@ public class Turrent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _fireCD = reloadTime;
         InvokeRepeating("UpdateTarget", 0f, 0.2f);
     }
 
@@ -65,6 +69,15 @@ public class Turrent : MonoBehaviour
     {
         if (_fireCD > 0) return ;
         // 判断炮塔是否旋转到位，如果已经旋转到位则直接开火
+        Vector3 dir = (target.transform.position - transform.position).normalized;
+        Vector3 rotateDir = rotateBase.forward;
+        if(Vector3.Dot(dir, rotateDir) > 0.9)
+        {
+            var fireTransform = firePoint.transform;
+            GameObject bullet = (GameObject)Instantiate(bulletPrefab, fireTransform.position, fireTransform.rotation);
+            bullet.GetComponent<Bullet>().Seek(target);
+            _fireCD = reloadTime;
+        }
     }
 
     void OnDrawGizmosSelected()
