@@ -113,9 +113,41 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 650305007534272454}
+  - {fileID: 6935843967132979910}
   m_Father: {fileID: 6970800959201912658}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!1 &5640382624114247857
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6935843967132979910}
+  m_Layer: 0
+  m_Name: Fire
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6935843967132979910
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5640382624114247857}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.617, z: 2.57}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6779275062809213166}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7638984576925524735
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,7 +279,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6b034f6d9b74ff45a18bf56eeec470d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 8855483064398237640, guid: 2228c0c35f89d2d41a4da65deb3bdff0,
+    type: 3}
   rotateBase: {fileID: 6779275062809213166}
+  firePoint: {fileID: 6935843967132979910}
   attackRange: 10
   reloadTime: 1
   rotateSpeed: 10

@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class WaveSpawner : MonoBehaviour
 {
     public DemoEnemy enemyPrefab;
+    
     public Transform spawnPoint;
     public float timeBetweenWaves = 5f;
     public Checkpoint[] checkpoints;
