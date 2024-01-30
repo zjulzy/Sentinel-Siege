@@ -6070,6 +6070,7 @@ GameObject:
   m_Component:
   - component: {fileID: 456214841}
   - component: {fileID: 456214840}
+  - component: {fileID: 456214842}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -6123,6 +6124,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &456214842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456214839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f70aee76d7cb1d47a431376ceadf4bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseTurrentPrefab: {fileID: 7779566100510866920, guid: 7e0b27586a7baad48bbe2e31b0eda6bd,
+    type: 3}
 --- !u!1001 &457181825
 PrefabInstance:
   m_ObjectHideFlags: 0
