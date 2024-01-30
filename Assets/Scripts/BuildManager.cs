@@ -7,6 +7,10 @@ public class BuildManager : MonoBehaviour
     // Start is called before the first frame update
     public GameObject baseTurrentPrefab;
     public static BuildManager instance;
+    
+    public GameObject[] turrentList;
+    public int currentTurrentId = -1;
+    
     void Start()
     {
         instance = this;
@@ -14,7 +18,8 @@ public class BuildManager : MonoBehaviour
 
     public GameObject GetTurrent()
     {
-        return baseTurrentPrefab;
+        if (currentTurrentId == -1) return null;
+        return turrentList[currentTurrentId];
     }
 
     // Update is called once per frame
