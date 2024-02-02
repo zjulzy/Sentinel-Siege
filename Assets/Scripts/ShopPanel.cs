@@ -2,8 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class ShopPanel : MonoBehaviour
+public class ShopPanel : MonoBehaviour,IPointerClickHandler
 {
     public void DeactiveAll()
     {
@@ -11,5 +12,10 @@ public class ShopPanel : MonoBehaviour
         {
             b.Deactivate();
         }
+    }
+    
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        DeactiveAll();
     }
 }
